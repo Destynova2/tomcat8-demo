@@ -1,0 +1,12 @@
+---
+- include: install.yml
+  tags:
+    - tomcat
+    - install
+    - install-tomcat
+
+- include: deploy.yml
+  tags:
+    - tomcat
+    - deploy
+    - deploy-tomcat

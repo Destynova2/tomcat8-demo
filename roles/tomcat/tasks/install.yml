@@ -1,0 +1,31 @@
+---
+- name: Install the package "tomcat8"
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items:
+    - tomcat8
+    - tomcat8-admin
+
+- name: configuration tomcat8
+  template:
+    src: tomcat8.j2
+    dest: /etc/default/tomcat8
+  notify: restart-tomcat8 
+
+- name: add users tomcat
+  template:
+    src: tomcat-users.xml.j2
+    dest: /etc/tomcat8/tomcat-users.xml
+  notify: restart-tomcat8
+
+- name: symlink for tomcat
+  file:
+    path: /usr/share/tomcat8/{{ item }}/classes
+    state: directory
+  with_items:
+    - common
+    - server
+    - shared

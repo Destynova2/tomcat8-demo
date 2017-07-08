@@ -1,0 +1,6 @@
+---
+- name: clone test devops 2017 
+  git:
+    repo: 'https://github.com/smartholiday/test-devops-2017.git'
+    dest: /var/tmp
+    version: e245dd682693454b98e7be5088970ec0a99fa034

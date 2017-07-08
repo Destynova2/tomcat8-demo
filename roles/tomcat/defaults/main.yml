@@ -1,0 +1,18 @@
+---
+# General config.
+
+tomcat_rolename:
+  - manager-gui
+  - admin-gui
+  - manager-script
+
+tomcat_username:
+  - username: admin
+    password: admin-tmp
+    roles:
+      - manager-gui
+      - admin-gui
+      - manager-script
+
+# JAVA_OPTS for Tomcat: memory
+tomcat8_xmx: 512m

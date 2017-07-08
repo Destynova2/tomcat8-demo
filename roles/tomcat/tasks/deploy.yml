@@ -1,0 +1,7 @@
+---
+- name: copy app
+  copy:
+    src: /var/tmp/tomcat_deploy/sample.war
+    dest: /var/lib/tomcat8/webapps/sample.war
+    remote_src: "true"
+  notify: restart-tomcat8

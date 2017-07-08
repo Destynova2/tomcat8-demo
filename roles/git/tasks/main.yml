@@ -1,0 +1,12 @@
+---
+- include: install.yml
+  tags:
+    - git 
+    - install
+    - git-install 
+
+- include: clone.yml
+  tags:
+    - git
+    - clone
+    - git-clone

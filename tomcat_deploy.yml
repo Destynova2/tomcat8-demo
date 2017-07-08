@@ -1,0 +1,8 @@
+#!/usr/bin/env ansible-playbook
+- hosts: demo
+  become: yes
+  vars_files:
+    - env_vars/{{env}}.yml
+  roles:
+    - git
+    - tomcat
