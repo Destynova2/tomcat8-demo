@@ -1,2 +1,2 @@
 ---
-env_tomcat8_xmx: 256
+tomcat8_xmx: 256

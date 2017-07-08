@@ -1,2 +1,0 @@
----
-tomcat8_xmx: "{{ env_tomcat8_xmx }}"
